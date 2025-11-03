@@ -1,5 +1,6 @@
 package edu.icet.controller;
 
+import edu.icet.model.Customer;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,5 +17,14 @@ public class CustomerController {
     @GetMapping("/age")
     public Integer getage(){
         return 11;
+    }
+
+    @GetMapping("/getcustomer")
+    public Customer getCustomer(){
+        return new Customer(
+                "saman",
+                "colombo",
+                11
+        );
     }
 }
