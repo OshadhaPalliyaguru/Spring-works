@@ -4,17 +4,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@RequestMapping("/item")
 @RestController
-@RequestMapping("/customer")
-public class CustomerController {
+public class ItemController {
 
     @GetMapping("/name")
     public String getname(){
-        return "Saman";
+        return "mobile";
     }
 
-    @GetMapping("/age")
-    public Integer getage(){
-        return 11;
+    @GetMapping("/number")
+    public Integer getnumber(){
+        return 2;
     }
 }
